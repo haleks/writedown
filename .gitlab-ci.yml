@@ -1,0 +1,41 @@
+# Default PHP image
+image: php
+
+# Cache
+cache:
+  paths:
+    # Cache Composer dependencies
+    - vendor/
+
+# Before tests
+before_script:
+  # Install Composer dependencies
+  - apt-get update -yqq
+  - apt-get install git zlib1g-dev -yqq
+  # Install PHP extensions
+  - docker-php-ext-install zip
+  # Install Composer
+  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  # Install project dependencies
+  - composer install --no-interaction --prefer-source --optimize-autoloader
+
+# Tests
+test:php-5.6:
+  image: php:5.6
+  script:
+    - vendor/bin/phpunit --verbose
+
+test:php-7.0:
+  image: php:7.0
+  script:
+    - vendor/bin/phpunit --verbose
+
+test:php-7.1:
+  image: php:7.1
+  script:
+    - vendor/bin/phpunit --verbose
+
+test:php-latest:
+  image: php
+  script:
+    - vendor/bin/phpunit --verbose

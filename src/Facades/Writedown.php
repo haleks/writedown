@@ -1,0 +1,18 @@
+<?php
+
+namespace Haleks\Writedown\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+class Writedown extends Facade
+{
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'writedown';
+    }
+}

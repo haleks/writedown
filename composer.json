@@ -1,0 +1,60 @@
+{
+    "name": "haleks/writedown",
+    "description": "Writedown integrate markdown \"curly\" braces inside the blade template engine, adding view extension and also giving the possibility of extending CommonMark.",
+    "keywords": ["writedown", "laravel", "blade", "markdown", "parsedown", "parsedown extra", "commonmark"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/haleks/writedown/issues",
+        "source": "https://github.com/haleks/writedown"
+    },
+    "authors": [
+        {
+            "name": "Alexandre Villeneuve",
+            "email": "haleksviller@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/contracts": "5.0.*|5.1.*|5.2.*|5.3.*",
+        "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*",
+        "illuminate/view": "5.0.*|5.1.*|5.2.*|5.3.*"
+    },
+    "require-dev": {
+        "erusev/parsedown": "~1.6",
+        "erusev/parsedown-extra": "~0.7",
+        "michelf/php-markdown": "~1.6",
+        "league/commonmark": "~0.15",
+        "mockery/mockery": "~0.9",
+        "phpunit/phpunit": "~5.4",
+        "orchestra/testbench": "3.3.*"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Haleks\\Writedown\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Haleks\\Writedown\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "suggest": {
+        "erusev/parsedown": "Required to use the parsedown driver (~1.6).",
+        "erusev/parsedown-extra": "Required to use the parsedownextra driver (~0.7).",
+        "michelf/php-markdown": "Required to use the markdown driver (~1.6)",
+        "league/commonmark": "Required to use the commonmark driver (~0.15)"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
