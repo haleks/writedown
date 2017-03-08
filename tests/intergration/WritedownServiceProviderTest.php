@@ -92,6 +92,7 @@ class WritedownServiceProviderTest extends TestCase
             'md.blade.php' => 'markdownblade',
             'blade.php' => 'blade',
             'php' => 'php',
+            'css' => 'file',
         ];
 
         $this->assertSame($expected, $actual);
@@ -108,6 +109,7 @@ class WritedownServiceProviderTest extends TestCase
         $expected = [
             'blade.php' => 'blade',
             'php' => 'php',
+            'css' => 'file',
         ];
 
         $this->assertSame($expected, $actual);

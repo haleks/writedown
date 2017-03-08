@@ -13,7 +13,7 @@ class ExtendTest extends TestCase
         $this->provider->register();
 
         $actual = $this->app['view']->make('blade')->render();
-        $expected = "<h1>title</h1>\n<p>text</p><p>{% ignore %}</p>\n<p>expression</p><p>block</p>";
+        $expected = "<h1>title</h1>\n<p>text</p>\n<p>{% ignore %}</p>\n<p>expression</p><p>block</p>";
 
         $this->assertSame($expected, $actual);
     }
@@ -27,7 +27,7 @@ class ExtendTest extends TestCase
         $this->provider->register();
 
         $actual = $this->app['view']->make('blade')->render();
-        $expected = "<h1>title</h1>\n<p>text</p><p>{% ignore %}</p>\n<p>expression</p><p>block</p>";
+        $expected = "<h1>title</h1>\n<p>text</p>\n<p>{% ignore %}</p>\n<p>expression</p><p>block</p>";
 
         $this->assertSame($expected, $actual);
     }
@@ -41,7 +41,7 @@ class ExtendTest extends TestCase
         $this->provider->register();
 
         $actual = $this->app['view']->make('blade')->render();
-        $expected = "<h1>title</h1>\n<p>text</p>\n<p>{% ignore %}</p>\n<p>expression</p>\n<p>block</p>\n";
+        $expected = "<h1>title</h1>\n<p>text</p>\n\n<p>{% ignore %}</p>\n<p>expression</p>\n<p>block</p>\n";
 
         $this->assertSame($expected, $actual);
     }
@@ -55,7 +55,7 @@ class ExtendTest extends TestCase
         $this->provider->register();
 
         $actual = $this->app['view']->make('blade')->render();
-        $expected = "<h1>title</h1>\n<p>text</p>\n<p>{% ignore %}</p>\n<p>expression</p>\n<p>block</p>\n";
+        $expected = "<h1>title</h1>\n<p>text</p>\n\n<p>{% ignore %}</p>\n<p>expression</p>\n<p>block</p>\n";
 
         $this->assertSame($expected, $actual);
     }
@@ -69,7 +69,7 @@ class ExtendTest extends TestCase
         $this->provider->register();
 
         $actual = $this->app['view']->make('blade')->render();
-        $expected = "<h1>title</h1>\n<p>text</p>\n<p>{% ignore %}</p>\n<p>expression</p>\n<p>block</p>\n";
+        $expected = "<h1>title</h1>\n<p>text</p>\n\n<p>{% ignore %}</p>\n<p>expression</p>\n<p>block</p>\n";
 
         $this->assertSame($expected, $actual);
     }
