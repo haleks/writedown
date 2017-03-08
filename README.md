@@ -14,6 +14,13 @@
 
 To learn more about this project you may read the documentation [here](/docs/README.md).
 
+## Compatibility
+
+| Laravel   | Writedown  |
+|-----------|------------|
+| 5.0 - 5.3 | 1.\*       |
+| 5.4       | 2.\*       |
+
 ## License
 
 Writedown is licensed under [The MIT License (MIT)](LICENSE).

@@ -28,7 +28,7 @@ Install via your projects' `composer.json`:
 
 Install via composer's require command:
 ```bash
-composer require haleks/writedown
+composer require haleks/writedown:~1.0
 ```
 
 Install via your projects' `composer.json`:
