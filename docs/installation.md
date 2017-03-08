@@ -39,7 +39,7 @@ Install via your projects' `composer.json`:
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "erusev/parsedown-extra": "~0.7",
-        "haleks/writedown": "~1.0"
+        "haleks/writedown": "~2.0"
     },
     ...
 }
