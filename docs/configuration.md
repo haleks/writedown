@@ -12,7 +12,7 @@
 You will need to pull the configuration in you app's configuration folder to make modifications to the default configuration. You can achieve this with the following artisan command:
 
 ``` bash
-php artisan vendor:publish --provider "Haleks\Writedown\ServiceProvider"
+php artisan vendor:publish --provider "Haleks\Writedown\WritedownServiceProvider"
 ```
 
 The configuration file will be created at `config/markdown.php`.
