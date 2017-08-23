@@ -53,7 +53,7 @@
                 "Haleks\\Writedown\\WritedownServiceProvider"
             ],
             "aliases": {
-                "Debugbar": "Haleks\\Writedown\\Facades\\Writedown"
+                "Writedown": "Haleks\\Writedown\\Facades\\Writedown"
             }
         }
     },
