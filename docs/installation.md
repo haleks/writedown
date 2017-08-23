@@ -17,7 +17,7 @@ Install via your projects' `composer.json`:
     ...
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
+        "laravel/framework": "5.4.*",
         "erusev/parsedown-extra": "~0.7"
     },
     ...
@@ -37,9 +37,9 @@ Install via your projects' `composer.json`:
     ...
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
+        "laravel/framework": "5.4.*",
         "erusev/parsedown-extra": "~0.7",
-        "haleks/writedown": "~2.0"
+        "haleks/writedown": "2.0.*"
     },
     ...
 }

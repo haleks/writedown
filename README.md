@@ -19,7 +19,7 @@ To learn more about this project you may read the documentation [here](/docs/REA
 | Laravel   | Writedown  |
 |-----------|------------|
 | 5.0 - 5.3 | 1.\*       |
-| 5.4       | 2.\*       |
+| 5.4       | 2.0.\*     |
 
 ## License
 
