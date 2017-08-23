@@ -2,11 +2,11 @@
 
 namespace Haleks\Writedown\Compilers\Concerns;
 
-use Illuminate\View\Compilers\Concerns\CompilesEchos as ParentCompilesEchos;
+use Illuminate\View\Compilers\Concerns\CompilesEchos as BaseCompilesEchos;
 
 trait CompilesEchos
 {
-    use ParentCompilesEchos;
+    use BaseCompilesEchos;
 
     /**
      * Get the echo methods in the proper order for compilation.

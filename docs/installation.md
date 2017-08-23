@@ -16,8 +16,8 @@ Install via your projects' `composer.json`:
 {
     ...
     "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "5.4.*",
+        "php": ">=7.0",
+        "laravel/framework": "5.5.*",
         "erusev/parsedown-extra": "~0.7"
     },
     ...
@@ -36,10 +36,10 @@ Install via your projects' `composer.json`:
 {
     ...
     "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "5.4.*",
+        "php": ">=7.0",
+        "laravel/framework": "5.5.*",
         "erusev/parsedown-extra": "~0.7",
-        "haleks/writedown": "2.0.*"
+        "haleks/writedown": "2.1.*"
     },
     ...
 }
@@ -57,7 +57,9 @@ composer update -o
 
 ## Registering The Package
 
-Once the package has been successfully pulled you will need to register the package's service provider to the Laravel's app and optionally add the package's facade by modifying `config/app.php`:
+This package supports Laravel 5.5 [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
+
+If you have opted out of Package Discovery you will need to register the package manually. Once the package has been successfully pulled you will need to register the package's service provider to the Laravel's app and optionally add the package's facade by modifying `config/app.php`:
 
 ```php
 ...
