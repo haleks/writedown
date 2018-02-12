@@ -20,7 +20,7 @@ To learn more about this project you may read the documentation [here](/docs/REA
 |-----------|------------|
 | 5.0 - 5.3 | 1.\*       |
 | 5.4       | 2.0.\*     |
-| 5.5       | 2.1.\*     |
+| 5.5 - 5.6 | 2.1.\*     |
 
 ## License
 
