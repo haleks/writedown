@@ -4,7 +4,6 @@
 
 [![travis ci](https://img.shields.io/travis/haleks/writedown/master.svg?style=flat-square)](https://travis-ci.org/haleks/writedown)
 [![latest release](https://img.shields.io/github/release/haleks/writedown.svg?style=flat-square)](https://github.com/haleks/writedown/releases)
-[![code climate](https://img.shields.io/codeclimate/github/haleks/writedown.svg?style=flat-square)](https://codeclimate.com/github/haleks/writedown)
 [![style ci](https://styleci.io/repos/84356970/shield?style=square)](https://styleci.io/repos/84356970)
 [![license](https://img.shields.io/badge/license-MIT-FF4E00.svg?style=flat-square)](license)
 
@@ -12,7 +11,7 @@
 
 ## Documentation
 
-To learn more about this project you may read the documentation [here](/docs/README.md).
+To learn more about this project you may read the documentation [here](https://writedown.haleks.ca/).
 
 ## Compatibility
 

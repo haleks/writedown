@@ -1,0 +1,13 @@
+{
+  "name": "writedown-documentation",
+  "version": "2.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^0.8.4"
+  }
+}

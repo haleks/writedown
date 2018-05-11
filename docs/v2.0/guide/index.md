@@ -1,10 +1,8 @@
-# Installation
+# Getting Started
 
-- [Pulling a Markdown Parser](#pulling-a-markdown-parser)
-- [Pulling The Package](#pulling-the-package)
-- [Registering The Package](#registering-the-package)
+## Installation
 
-## Pulling a Markdown Parser
+### Pulling a Markdown Parser
 
 Install via composer's require command:
 ```bash
@@ -17,18 +15,18 @@ Install via your projects' `composer.json`:
     ...
     "require": {
         "php": ">=7.0",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.4.*",
         "erusev/parsedown-extra": "~0.7"
     },
     ...
 }
 ```
 
-## Pulling The Package
+### Pulling The Package
 
 Install via composer's require command:
 ```bash
-composer require haleks/writedown
+composer require haleks/writedown "2.0.*"
 ```
 
 Install via your projects' `composer.json`:
@@ -37,9 +35,9 @@ Install via your projects' `composer.json`:
     ...
     "require": {
         "php": ">=7.0",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.4.*",
         "erusev/parsedown-extra": "~0.7",
-        "haleks/writedown": "2.1.*"
+        "haleks/writedown": "2.0.*"
     },
     ...
 }
@@ -53,9 +51,12 @@ composer install -o
 # or Update
 composer update -o
 ```
-<sup>**Note**: The trailing `-o` is an optional option which is used to optimize the autoloader and is considered best practice.</sup>
 
-## Registering The Package
+::: tip
+The trailing `-o` is an optional option which is used to optimize the autoloader and is considered best practice for production use.
+:::
+
+### Registering The Package
 
 This package supports Laravel 5.5 [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
 
@@ -78,3 +79,21 @@ If you have opted out of Package Discovery you will need to register the package
     ],
 ...
 ```
+
+## Prerequisites
+
+This project requires that the following packages be previously installed.
+
+### Specifications
+
+- [PHP](https://php.net) 7.0+ / [HHVM](http://hhvm.com) 3.11+
+- [Composer](https://github.com/composer/composer)
+- [Laravel](https://laravel.com/docs/5.3/installation) 5.4
+
+### Supported Markdown Parser
+
+- [Parsedown](http://parsedown.org) 1.6+
+- [Parsedown Extra](http://parsedown.org/extra/) 0.7+
+- [Commonmark](http://commonmark.thephpleague.com) 0.15+
+- [Markdown](http://michelf.ca/projects/php-markdown/) 1.6+
+- [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) 1.6+
