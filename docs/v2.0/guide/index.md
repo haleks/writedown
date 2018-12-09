@@ -58,9 +58,7 @@ The trailing `-o` is an optional option which is used to optimize the autoloader
 
 ### Registering The Package
 
-This package supports Laravel 5.5 [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
-
-If you have opted out of Package Discovery you will need to register the package manually. Once the package has been successfully pulled you will need to register the package's service provider to the Laravel's app and optionally add the package's facade by modifying `config/app.php`:
+Once the package has been successfully pulled you will need to register the package's service provider to the Laravel's app and optionally add the package's facade by modifying `config/app.php`:
 
 ```php
 ...
