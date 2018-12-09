@@ -43,39 +43,10 @@ class BladeCompilerTest extends \Haleks\Writedown\Tests\Unit\TestCase
     }
 
     /** @test */
-    public function it_can_compile_unescaped_blade_tags_defaults()
-    {
-        $actual = $this->compiler->compileString('{!! $foo or \'bar\' !!}');
-        $expected = '<?php echo isset($foo) ? $foo : \'bar\'; ?>';
-
-        $this->assertSame($expected, $actual);
-    }
-
-    /** @test */
-    public function it_can_compile_escaped_blade_tags_defaults()
-    {
-        $actual[] = $this->compiler->compileString('{{ $foo or \'bar\' }}');
-        $actual[] = $this->compiler->compileString('{{{ $foo or \'bar\' }}}');
-        $expected = '<?php echo e(isset($foo) ? $foo : \'bar\'); ?>';
-
-        $this->assertSame($expected, $actual[0]);
-        $this->assertSame($expected, $actual[1]);
-    }
-
-    /** @test */
     public function it_can_compile_markdown_tags()
     {
         $actual = $this->compiler->compileString('{% $foo %}');
         $expected = '<?php echo writedown($foo); ?>';
-
-        $this->assertSame($expected, $actual);
-    }
-
-    /** @test */
-    public function it_can_compile_markdown_tags_defaults()
-    {
-        $actual = $this->compiler->compileString('{% $foo or \'bar\'%}');
-        $expected = '<?php echo writedown(isset($foo) ? $foo : \'bar\'); ?>';
 
         $this->assertSame($expected, $actual);
     }

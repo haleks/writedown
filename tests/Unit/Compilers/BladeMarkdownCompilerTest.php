@@ -43,26 +43,6 @@ class BladeMarkdownCompilerTest extends \Haleks\Writedown\Tests\Unit\TestCase
     }
 
     /** @test */
-    public function it_can_compile_unescaped_blade_tags_defaults()
-    {
-        $actual = $this->compiler->compileString('{!! $foo or \'bar\' !!}');
-        $expected = '<?php echo isset($foo) ? $foo : \'bar\'; ?>';
-
-        $this->assertSame($expected, $actual);
-    }
-
-    /** @test */
-    public function it_can_compile_escaped_blade_tags_defaults()
-    {
-        $actual[] = $this->compiler->compileString('{{ $foo or \'bar\' }}');
-        $actual[] = $this->compiler->compileString('{{{ $foo or \'bar\' }}}');
-        $expected = '<?php echo e(isset($foo) ? $foo : \'bar\'); ?>';
-
-        $this->assertSame($expected, $actual[0]);
-        $this->assertSame($expected, $actual[1]);
-    }
-
-    /** @test */
     public function it_can_compile_unescaped_blade_tags_and_parse_markdown_into_html()
     {
         $this->filesystem->shouldReceive('get')->once()->with('foo')->andReturn('# {!! $foo !!}');
@@ -100,35 +80,6 @@ class BladeMarkdownCompilerTest extends \Haleks\Writedown\Tests\Unit\TestCase
         $this->compiler->compile('foo');
 
         $this->assertEquals('foo', $this->compiler->getPath());
-    }
-
-    /** @test */
-    public function it_can_compile_unescaped_blade_tags_defaults_and_parse_markdown_into_html()
-    {
-        $this->filesystem->shouldReceive('get')->once()->with('foo')->andReturn('# {!! $foo or \'bar\' !!}');
-        $this->filesystem->shouldReceive('put')->once()->with(__DIR__.'/'.sha1('foo').'.php', '# <?php echo isset($foo) ? $foo : \'bar\'; ?>');
-
-        $this->compiler->compile('foo');
-
-        $this->assertEquals('foo', $this->compiler->getPath());
-    }
-
-    /** @test */
-    public function it_can_compile_escaped_blade_tags_defaults_and_parse_markdown_into_html()
-    {
-        $this->filesystem->shouldReceive('get')->once()->with('foo')->andReturn('# {{ $foo or \'bar\' }}');
-        $this->filesystem->shouldReceive('put')->once()->with(__DIR__.'/'.sha1('foo').'.php', '# <?php echo e(isset($foo) ? $foo : \'bar\'); ?>');
-
-        $this->compiler->compile('foo');
-
-        $this->assertEquals('foo', $this->compiler->getPath());
-
-        $this->filesystem->shouldReceive('get')->once()->with('bar')->andReturn('# {{{ $bar or \'foo\' }}}');
-        $this->filesystem->shouldReceive('put')->once()->with(__DIR__.'/'.sha1('bar').'.php', '# <?php echo e(isset($bar) ? $bar : \'foo\'); ?>');
-
-        $this->compiler->compile('bar');
-
-        $this->assertEquals('bar', $this->compiler->getPath());
     }
 
     /** @test */

@@ -36,7 +36,7 @@ trait CompilesEchos
         $callback = function ($matches) {
             $whitespace = empty($matches[3]) ? '' : $matches[3].$matches[3];
 
-            $wrapped = sprintf($this->markdownFormat, $this->compileEchoDefaults($matches[2]));
+            $wrapped = sprintf($this->markdownFormat, $matches[2]);
 
             return $matches[1] ? substr($matches[0], 1) : "<?php echo {$wrapped}; ?>{$whitespace}";
         };

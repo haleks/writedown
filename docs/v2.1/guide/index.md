@@ -15,7 +15,7 @@ Install via your projects' `composer.json`:
     ...
     "require": {
         "php": ">=7.1",
-        "laravel/framework": "5.7.*",
+        "laravel/framework": "5.6.*",
         "erusev/parsedown-extra": "~0.7"
     },
     ...
@@ -26,7 +26,7 @@ Install via your projects' `composer.json`:
 
 Install via composer's require command:
 ```bash
-composer require haleks/writedown
+composer require haleks/writedown "2.1.*"
 ```
 
 Install via your projects' `composer.json`:
@@ -35,9 +35,9 @@ Install via your projects' `composer.json`:
     ...
     "require": {
         "php": ">=7.1",
-        "laravel/framework": "5.7.*",
+        "laravel/framework": "5.6.*",
         "erusev/parsedown-extra": "~0.7",
-        "haleks/writedown": "2.2.*"
+        "haleks/writedown": "2.1.*"
     },
     ...
 }
@@ -88,7 +88,7 @@ This project requires that the following packages be previously installed.
 
 - [PHP](https://php.net) 7.1+ / [HHVM](http://hhvm.com) 3.6+
 - [Composer](https://github.com/composer/composer)
-- [Laravel](https://laravel.com/docs/5.3/installation) 5.7
+- [Laravel](https://laravel.com/docs/5.3/installation) 5.5 | 5.6
 
 ### Supported Markdown Parser
 
