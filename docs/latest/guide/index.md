@@ -14,7 +14,7 @@ Install via your projects' `composer.json`:
 {
     ...
     "require": {
-        "php": ">=7.1",
+        "php": "^7.1.3",
         "laravel/framework": "5.7.*",
         "erusev/parsedown-extra": "~0.7"
     },
@@ -34,7 +34,7 @@ Install via your projects' `composer.json`:
 {
     ...
     "require": {
-        "php": ">=7.1",
+        "php": "^7.1.3",
         "laravel/framework": "5.7.*",
         "erusev/parsedown-extra": "~0.7",
         "haleks/writedown": "2.2.*"
@@ -86,7 +86,7 @@ This project requires that the following packages be previously installed.
 
 ### Specifications
 
-- [PHP](https://php.net) 7.1+ / [HHVM](http://hhvm.com) 3.6+
+- [PHP](https://php.net) 7.1.3+ / [HHVM](http://hhvm.com) 3.6+
 - [Composer](https://github.com/composer/composer)
 - [Laravel](https://laravel.com/docs/5.3/installation) 5.7
 
