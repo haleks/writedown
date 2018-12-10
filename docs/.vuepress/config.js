@@ -41,6 +41,7 @@ module.exports = {
             text: 'Guide',
             items: [
               { text: 'Latest', link: '/latest/guide/' },
+              { text: 'v2.1', link: '/v2.1/guide/' },
               { text: 'v2.0', link: '/v2.0/guide/' },
               { text: 'v1.0', link: '/v1.0/guide/' }
             ]
@@ -48,6 +49,14 @@ module.exports = {
         ],
         sidebar: {
           '/latest/guide/': sidebar({
+            title: 'Guide',
+            children: [
+              '',
+              'configuration',
+              'how-to-use'
+            ]
+          }),
+          '/v2.1/guide/': sidebar({
             title: 'Guide',
             children: [
               '',
